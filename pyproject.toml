@@ -2,7 +2,15 @@
 name = "majocol"
 version = "0.1.0"
 description = "pick major colors from image"
+
+license = "MIT"
+
 authors = ["suzukey <suzukey28@gmail.com>"]
+
+readme = 'README.md'
+
+repository = "https://github.com/suzukey/majocol"
+homepage = "https://github.com/suzukey/majocol"
 
 [tool.poetry.dependencies]
 python = "^3.8"
