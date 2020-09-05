@@ -1,11 +1,10 @@
 from sklearn.cluster import KMeans
 
 from majocol.utils import is_positive_int
-from majocol.types import HexRgb
+from majocol.types import HexRgbList
 
 
-# TODO Returns a list of HexRgb
-def pick(rgb_image, count: int = 1) -> HexRgb:
+def pick(rgb_image, count: int = 1) -> HexRgbList:
     """
     Pick major colors from image
     """
@@ -22,7 +21,9 @@ def pick(rgb_image, count: int = 1) -> HexRgb:
     cluster.fit(X=img)
 
     centers_arr = cluster.cluster_centers_.astype(int, copy=False)
+    colors_hex = []
     for rgb_arr in centers_arr:
         color_hex = '%02x%02x%02x' % tuple(rgb_arr)
+        colors_hex.append(color_hex)
 
-    return color_hex
+    return colors_hex
