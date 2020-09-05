@@ -8,7 +8,7 @@
 
 <p align="center">
   <a href="https://pypi.org/project/majocol/" target="_blank">
-    <img src="https://img.shields.io/pypi/v/majocol?color=%2334D058&label=pypi%20package" alt="Package version">
+    <img src="https://badge.fury.io/py/majocol.svg" alt="Package version">
   </a>
 </p>
 
@@ -22,7 +22,7 @@
 
 ## Requirements
 
-Python 3.8+
+Python 3.6+
 
 ## Installation
 

@@ -13,7 +13,7 @@ repository = "https://github.com/suzukey/majocol"
 homepage = "https://github.com/suzukey/majocol"
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "^3.6"
 numpy = "^1.19.1"
 opencv-python = "^4.4.0"
 scikit-learn = "^0.23.2"
