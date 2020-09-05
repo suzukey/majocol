@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "majocol"
-version = "0.1.1"
+version = "0.1.2"
 description = "pick major colors from image"
 
 license = "MIT"
