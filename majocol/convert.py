@@ -1,21 +1,37 @@
-import cv2
+import io
+
 import numpy as np
+from PIL import Image
 
 
-def byte_to_cv2_rgb(bytes_image: bytes):
+def byte_to_rgb_ndarr(image_bytes: bytes):
     """
-    Convert image from byte to cv2
+    Convert image from `byte` to `ndarray(rgb)`
     """
-    bytearr_image = bytearray(bytes_image.read())
-    image = np.asarray(bytearr_image, dtype=np.uint8)
-    cv2_image = cv2.imdecode(image, cv2.IMREAD_COLOR)
-    rgb_image = cv2_bgr_to_rgb(cv2_image)
-    return rgb_image
+    bytes_load = io.BytesIO(image_bytes)
+    image_pillow = Image.open(bytes_load)
+    image_ndarray = pillow_to_rgb_ndarr(image_pillow)
+
+    return image_ndarray
 
 
-def cv2_bgr_to_rgb(cv2_image):
+def pillow_to_rgb_ndarr(image_pillow):
+    """
+    Convert image from `Pillow` to `ndarray(rgb)`
+    """
+    image_ndarray = np.array(image_pillow.convert('RGB'))
+
+    return image_ndarray
+
+
+def cv2_to_rgb_ndarr(image_cv2):
     """
     Convert color order from BGR to RGB
+
+    Requirements: `cv2(opencv-python)`
     """
-    rgb_image = cv2.cvtColor(cv2_image, cv2.COLOR_BGR2RGB)
-    return rgb_image
+    import cv2
+
+    image_ndarray = cv2.cvtColor(image_cv2, cv2.COLOR_BGR2RGB)
+
+    return image_ndarray
