@@ -8,13 +8,15 @@
 
 <p align="center">
   <a href="https://pypi.org/project/majocol/" target="_blank">
-    <img src="https://badge.fury.io/py/majocol.svg" alt="Package version">
+    <img src="https://img.shields.io/pypi/v/majocol?color=blue" alt="Package version">
   </a>
 </p>
 
 ---
 
 **Documentation**:
+
+**Demo**:
 
 ---
 
@@ -28,6 +30,12 @@ Python 3.6+
 
 ```shell
 $ pip3 install majocol
+```
+
+## Example
+
+```python
+
 ```
 
 <p align="center">&mdash; 🪄 &mdash;</p>
