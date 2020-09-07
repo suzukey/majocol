@@ -1,4 +1,4 @@
-from typing import NewType, List
+from typing import List, NewType
 
 HexRgb = NewType('HexRgb', str)
 HexRgbList = NewType('HexRgbList', List[HexRgb])

@@ -1,8 +1,8 @@
 import numpy as np
 from sklearn.cluster import KMeans
 
-from majocol.utils import is_positive_int, rgb2hex
 from majocol.types import HexRgbList
+from majocol.utils import is_positive_int, rgb2hex
 
 
 def pick(image_ndarray, count: int = 1) -> HexRgbList:
