@@ -4,7 +4,7 @@ import numpy as np
 from PIL import Image
 
 
-def byte_to_rgb_ndarr(image_bytes: bytes):
+def byte_to_rgb_ndarr(image_bytes: bytes) -> np.ndarray:
     """
     Convert image from `byte` to `ndarray(rgb)`
     """
@@ -15,7 +15,7 @@ def byte_to_rgb_ndarr(image_bytes: bytes):
     return image_ndarray
 
 
-def pillow_to_rgb_ndarr(image_pillow):
+def pillow_to_rgb_ndarr(image_pillow: Image) -> np.ndarray:
     """
     Convert image from `Pillow` to `ndarray(rgb)`
     """
@@ -24,7 +24,7 @@ def pillow_to_rgb_ndarr(image_pillow):
     return image_ndarray
 
 
-def cv2_to_rgb_ndarr(image_cv2):
+def cv2_to_rgb_ndarr(image_cv2: np.ndarray) -> np.ndarray:
     """
     Convert color order from BGR to RGB
 

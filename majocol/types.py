@@ -1,4 +1,6 @@
-from typing import List, NewType
+from typing import NewType
+
+import numpy as np
 
 HexRgb = NewType('HexRgb', str)
-HexRgbList = NewType('HexRgbList', List[HexRgb])
+Uint8 = np.dtype('uint8')
