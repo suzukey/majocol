@@ -1,8 +1,6 @@
 from functools import lru_cache
 from typing import Any
 
-from majocol.types import Uint8
-
 
 def is_positive_int(target: Any) -> bool:
     """
@@ -12,7 +10,7 @@ def is_positive_int(target: Any) -> bool:
 
 
 @lru_cache(maxsize=None)
-def rgb2hex(r: Uint8, g: Uint8, b: Uint8) -> str:
+def rgb2hex(r: int, g: int, b: int) -> str:
     """
     Convert RGB color from decimal to hexadecimal
     """
