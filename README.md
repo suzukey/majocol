@@ -35,7 +35,30 @@ $ pip3 install majocol
 ## Example
 
 ```python
+from majocol import color, convert
 
+# Using Pillow (Open local image)
+from PIL import Image
+
+image = Image.open(<IMAGE_PATH>)
+image_ndarr = convert.pillow_to_rgb_ndarr(image)
+colors = color.pick(image_ndarr, 3)
+
+
+# Using opencv-python (Open local image)
+import cv2
+
+image = cv2.imread(<IMAGE_PATH>)
+image_ndarr = convert.cv2_to_rgb_ndarr(image)
+colors = color.pick(image_ndarr, 3)
+
+
+# Using requests (Fetch web image)
+import requests
+
+resp = requests.get(<IMAGE_URL>)
+image_ndarr = convert.byte_to_rgb_ndarr(resp.content)
+colors = color.pick(image_ndarr, 3)
 ```
 
 <p align="center">&mdash; 🪄 &mdash;</p>
