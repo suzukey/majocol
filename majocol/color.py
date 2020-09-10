@@ -19,7 +19,7 @@ def pick(image_rgb: np.ndarray, count: int = 1) -> Optional[List[str]]:
     image_size = image_height * image_width
     rgb_ndarray = image_rgb.reshape(image_size, 3)
 
-    cluster = KMeans(n_clusters=count)
+    cluster = KMeans(n_clusters=count, random_state=0)
     cluster.fit(rgb_ndarray)
     centers_arr = cluster.cluster_centers_.astype(np.uint8, copy=False)
 
