@@ -19,7 +19,7 @@ def pillow_to_rgb_ndarr(image_pillow: Image) -> np.ndarray:
     """
     Convert image from `Pillow` to `ndarray(rgb)`
     """
-    image_ndarray = np.array(image_pillow.convert('RGB'))
+    image_ndarray = np.array(image_pillow.convert("RGB"))
 
     return image_ndarray
 
