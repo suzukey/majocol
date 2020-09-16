@@ -14,4 +14,4 @@ def rgb2hex(r: int, g: int, b: int) -> str:
     """
     Convert RGB color from decimal to hexadecimal
     """
-    return '#%02x%02x%02x' % (r, g, b)
+    return "#%02x%02x%02x" % (r, g, b)
