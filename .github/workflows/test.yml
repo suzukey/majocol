@@ -1,0 +1,41 @@
+name: Test
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  tests:
+    name: Python ${{ matrix.python-version }}
+    runs-on: ubuntu-latest
+
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [3.6, 3.7, 3.8]
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install Poetry
+        run: pip install poetry
+      - name: Install dependencies
+        run: poetry install
+      - name: Run linting checks
+        run: |
+          poetry run isort --check --diff $SOURCE_FILES
+          poetry run black --check --diff $SOURCE_FILES
+          poetry run flake8 $SOURCE_FILES
+          poetry run mypy $SOURCE_FILES
+        env:
+          SOURCE_FILES: majocol tests
+      - name: Run tests
+        run: poetry run pytest --cov=majocol --cov=tests --cov-report=term-missing --cov-report=xml tests
+      - name: Upload coverage
+        uses: codecov/codecov-action@v1
