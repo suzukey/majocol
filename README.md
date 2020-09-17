@@ -7,6 +7,14 @@
 </p>
 
 <p align="center">
+  <a href="https://github.com/suzukey/majocol/actions?query=workflow%3ATest" target="_blank">
+    <img src="https://github.com/suzukey/majocol/workflows/Test/badge.svg" alt="Test">
+  </a>
+
+  <a href="https://codecov.io/gh/suzukey/majocol" target="_blank">
+    <img src="https://img.shields.io/codecov/c/gh/suzukey/majocol" alt="Coverage">
+  </a>
+
   <a href="https://pypi.org/project/majocol/" target="_blank">
     <img src="https://img.shields.io/pypi/v/majocol?color=blue" alt="Package version">
   </a>
@@ -49,7 +57,7 @@ colors = color.pick(image_ndarr, 3)
 import cv2
 
 image = cv2.imread(<IMAGE_PATH>)
-image_ndarr = convert.cv2_to_rgb_ndarr(image)
+image_ndarr = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 colors = color.pick(image_ndarr, 3)
 
 
