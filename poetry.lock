@@ -92,6 +92,14 @@ python-versions = "*"
 version = "0.6"
 
 [[package]]
+category = "main"
+description = "Calculate the length of the sides that fit into the limited volume"
+name = "fitrate"
+optional = false
+python-versions = ">=3.6,<4.0"
+version = "1.0.0"
+
+[[package]]
 category = "dev"
 description = "the modular source code checker: pep8 pyflakes and co"
 name = "flake8"
@@ -419,7 +427,7 @@ docs = ["sphinx", "jaraco.packaging (>=3.2)", "rst.linker (>=1.9)"]
 testing = ["jaraco.itertools", "func-timeout"]
 
 [metadata]
-content-hash = "c6b9c2b2057b6f48033f89d67ac3c28fcd4a9107e8c3859afd26a444ff01a335"
+content-hash = "ddb8c431311368f51decbb5fdf58ef55748b1e4fb68b79c580d62f1f776cf9b4"
 lock-version = "1.0"
 python-versions = "^3.6"
 
@@ -487,6 +495,10 @@ coverage = [
 dataclasses = [
     {file = "dataclasses-0.6-py3-none-any.whl", hash = "sha256:454a69d788c7fda44efd71e259be79577822f5e3f53f029a22d08004e951dc9f"},
     {file = "dataclasses-0.6.tar.gz", hash = "sha256:6988bd2b895eef432d562370bb707d540f32f7360ab13da45340101bc2307d84"},
+]
+fitrate = [
+    {file = "fitrate-1.0.0-py3-none-any.whl", hash = "sha256:d7066a0fc7260e2d3b81e909827401c4b21a1776c1d4ef7c4e725b994563b296"},
+    {file = "fitrate-1.0.0.tar.gz", hash = "sha256:dbe7f3b050131fb8d91b32f4a3e8a02cfaf2fc7bfc3d31a1f8af993e8bbb22c1"},
 ]
 flake8 = [
     {file = "flake8-3.8.3-py2.py3-none-any.whl", hash = "sha256:15e351d19611c887e482fb960eae4d44845013cc142d42896e9862f775d8cf5c"},
